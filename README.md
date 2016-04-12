@@ -1,3 +1,3 @@
 # semaine_intensive_3D
 
-test pour la semaine Intensiiiiiiiveeee
+Semaine intensive web/3D
