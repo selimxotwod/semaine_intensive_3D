@@ -105,7 +105,7 @@ if(isset($erreur)){
             <div id="competition">
                 <h2>Prochain tournoi</h2>
                 <div id="test">
-                    <?php include 'horloge.php'?>
+                    <?php include 'horloge.php' ?>
                 </div>
             </div>
         </div>
@@ -113,36 +113,30 @@ if(isset($erreur)){
 
         <!--BLOC 3-->
         <div id="bloc-3">
-            <h2>Meilleurs scores</h2>
-            <ul>
-                <li>
-                    <button class="classement">JOUR</button>
-                </li>
-                <li>
-                    <button class="classement">NATIONAL</button>
-                </li>
-                <li>
-                    <button class="classement">MONDIAL</button>
-                </li>
-            </ul>
-            <table class="ranking">
-                <?php
-        include 'ranking.php';
-        ?>
+        <h2>Meilleurs scores</h2>
 
+        <ul>
+            <li>
+                <a href="#here" onclick="getActive(0)"><button class="classement">GENERAL</button></a>
+            </li>
+            <li>
+                <a href="#here" onclick="getActive(1)"><button class="classement">JOUR</button></a>
+            </li>
+            <li>
+                <a href="#here" onclick="getActive(2)"><button class="classement">PAR PAYS</button></a>
+            </li>
+        </ul>
+        <table class="ranking active">
+            <?php include 'ranking.php'; ?>
+        </table>
 
-            </table>
-            <table class="ranking_jour">
-                <?php
-        include 'ranking_jour.php';
-        ?>
+        <table class="ranking">
+            <?php include 'ranking_jour.php'; ?>
+        </table>
 
-
-            </table>
-            <table class="score">
-
-
-            </table>
+        <table class="ranking">
+            <?php include 'moy_pays.php'; ?>
+        </table>
 
             <button>En voir plus</button>
 
@@ -177,7 +171,18 @@ if(isset($erreur)){
             $(document).scroll(function () {
                 $("#texte").fadeIn(2500);
             });
+            var ranking = document.querySelectorAll(".ranking");
+        
+
+
+            function getActive(a){  
+                var active = document.querySelector(".active");
+                active.classList.remove("active")
+                ranking[a].classList.add("active")
+            }
         </script>
+
+
         <!--FIN SCROLL TO-->
 
         <!--MENU-->
