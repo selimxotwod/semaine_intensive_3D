@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "bebas neue";
+    src: url(font/bebas_neue/BebasNeue.otf);
+}
+
+@font-face {
+    font-family: "museo";
+    src: url(font/MuseoSans/MuseoSans-300.otf);
+}
+
+body {
+    background-color: #5d535e;
+    width: 100%;
+}
+
+h2 {
+    color: white;
+    font-family: "bebas neue";
+    font-size: 40px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+p {
+    color: white;
+    font-family: "museo";
+    text-align: center;
+    margin-top: 50px;
+}
+
+a {
+    color: white;
+    margin-left: 40px;
+    font-family: "museo";
+}
+
+#nav {
+    margin-top: 20px;
+}

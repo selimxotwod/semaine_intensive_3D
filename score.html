@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Pipeser </title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="score.css">
+</head>
+
+<body>
+
+    <div id="content">
+
+        <a href="index.php"><img src="img/home.png" alt="" id="home"></a>
+
+        <h1> Pipeser </h1>
+
+        <div id="left">
+            <h2>Comment jouer ?</h2>
+
+            <table>
+                <tr>
+                    <td>Aller à gauche :</td>
+                    <td>←</td>
+                </tr>
+                <tr>
+                    <td>Aller à droite :</td>
+                    <td>→</td>
+                </tr>
+                <tr>
+                    <td>Boost :</td>
+                    <td>espace</td>
+                </tr>
+                <tr>
+                    <td>Objectif :</td>
+                    <td> Arriver à la fin du tuyau le plus rapidement possible, tout en évitant les obstacles et en ramassant le plus de pièces possibles.</td>
+                </tr>
+
+
+
+            </table>
+        </div>
+
+        <div id="right">
+            <img src="./img/car_dos.png" id="car">
+
+            <a href="final2.html">
+            <button id="">
+                <div id="new">Nouvelle partie</div>
+            </button>
+            </a>
+        </div>
+    </div>
+
+
+
+
+    <script src="jquery.js"></script>
+
+    <script>
+        $("#new").click(function () {
+            $(".cache").slideToggle("slow");
+        });
+    </script>
+
+
+</body>
+
+</html>
